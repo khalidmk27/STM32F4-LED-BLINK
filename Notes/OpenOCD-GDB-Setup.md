@@ -235,7 +235,7 @@ cmake --build build
 Fix:
 
 ```gdb
-set architecture armv7-m
+set architecture armv7e-m
 ```
 
 ---
