@@ -361,4 +361,11 @@ This project is part of a broader exploration of:
 
 # License
 
-MIT License.
+## License
+
+Licensed under either of:
+
+- Apache License, Version 2.0
+- MIT License
+
+at your option.
