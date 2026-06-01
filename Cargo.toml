@@ -1,0 +1,34 @@
+[package]
+name = "stm32f4-blink"
+version = "0.1.0"
+authors = ["khalidmk27 <khizarmdkhalid10@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+panic-probe = { version = "0.3.1", features = ["defmt"] }
+
+# Logging framework
+defmt = "0.3.1"
+defmt-rtt = "0.4.2"
+
+[dependencies.stm32f4xx-hal]
+version = "0.23.0"
+features = ["stm32f410", "defmt", ]
+
+
+[build-dependencies]
+reqwest = { version = "0.11", features = ["blocking"] }
+
+
+# Set the default for dependencies.
+[profile.dev.package."*"]
+opt-level = "s"
+
+[profile.release]
+codegen-units = 1
+incremental = false
+debug = true
+lto = true
+opt-level = "s"

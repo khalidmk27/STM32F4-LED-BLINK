@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "preLaunchTask": "${defaultBuildTask}",
+
+            "type": "probe-rs-debug",
+            "request": "launch",
+
+            "name": "STM32F410 Debug",
+
+            "chip": "STM32F410RBTx",
+
+            "flashingConfig": {
+                "flashingEnabled": true,
+                "haltAfterReset": true
+            },
+
+            "coreConfigs": [
+                {
+                    "coreIndex": 0,
+
+                    "programBinary": "${workspaceFolder}/target/thumbv7em-none-eabihf/debug/stm32f4-blink"
+                }
+            ]
+        }
+    ]
+}
